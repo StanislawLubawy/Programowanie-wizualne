@@ -5,6 +5,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Windows.Forms;
 
 namespace pracownicy
@@ -53,6 +54,31 @@ namespace pracownicy
             buttonDelete.Click += ButtonDelete_Click;
             buttonSave.Click += ButtonSave_Click;
             buttonLoad.Click += ButtonLoad_Click;
+            buttonExportJson.Click += ButtonExportJson_Click;
+        }
+
+        private void ButtonExportJson_Click(object? sender, EventArgs e)
+        {
+            var list = new List<Osoba>();
+            foreach (var emp in employees)
+            {
+                list.Add(new Osoba
+                {
+                    Id = emp.Id,
+                    FirstName = emp.FirstName,
+                    LastName = emp.LastName,
+                    Age = emp.Age,
+                    Position = emp.Position
+                });
+            }
+
+            using var sfd = new SaveFileDialog { Filter = "JSON files (*.json)|*.json", FileName = "pracownicy.json" };
+            if (sfd.ShowDialog(this) == DialogResult.OK)
+            {
+                var opts = new JsonSerializerOptions { WriteIndented = true };
+                var json = JsonSerializer.Serialize(list, opts);
+                File.WriteAllText(sfd.FileName, json, Encoding.UTF8);
+            }
         }
 
         private void ButtonAdd_Click(object? sender, EventArgs e)
