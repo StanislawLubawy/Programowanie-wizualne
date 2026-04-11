@@ -22,87 +22,104 @@ namespace pracownicy
 
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.buttonLoad = new System.Windows.Forms.Button();
-            this.buttonExport = new System.Windows.Forms.Button();
-            this.buttonExportJson = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
-
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(560, 300);
-            this.dataGridView1.TabIndex = 0;
-
-            this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdd.Location = new System.Drawing.Point(578, 12);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(90, 30);
-            this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.Text = "Dodaj";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-
-            this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDelete.Location = new System.Drawing.Point(578, 48);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(90, 30);
-            this.buttonDelete.TabIndex = 2;
-            this.buttonDelete.Text = "Usuń";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-
-            this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSave.Location = new System.Drawing.Point(12, 318);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(120, 30);
-            this.buttonSave.TabIndex = 3;
-            this.buttonSave.Text = "Zapis do .csv";
-            this.buttonSave.UseVisualStyleBackColor = true;
-
-            this.buttonLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonLoad.Location = new System.Drawing.Point(138, 318);
-            this.buttonLoad.Name = "buttonLoad";
-            this.buttonLoad.Size = new System.Drawing.Size(120, 30);
-            this.buttonLoad.TabIndex = 4;
-            this.buttonLoad.Text = "Odczyt z .csv";
-            this.buttonLoad.UseVisualStyleBackColor = true;
-
-            this.buttonExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonExport.Location = new System.Drawing.Point(264, 318);
-            this.buttonExport.Name = "buttonExport";
-            this.buttonExport.Size = new System.Drawing.Size(120, 30);
-            this.buttonExport.TabIndex = 5;
-            this.buttonExport.Text = "Eksport do XML";
-            this.buttonExport.UseVisualStyleBackColor = true;
-
-            this.buttonExportJson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonExportJson.Location = new System.Drawing.Point(264, 318);
-            this.buttonExportJson.Name = "buttonExportJson";
-            this.buttonExportJson.Size = new System.Drawing.Size(120, 30);
-            this.buttonExportJson.TabIndex = 5;
-            this.buttonExportJson.Text = "Zapis do JSON";
-            this.buttonExportJson.UseVisualStyleBackColor = true;
-
-            this.ClientSize = new System.Drawing.Size(680, 360);
-            this.Controls.Add(this.buttonExport);
-            this.Controls.Add(this.buttonExportJson);
-            this.Controls.Add(this.buttonLoad);
-            this.Controls.Add(this.buttonSave);
-            this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "MainForm";
-            this.Text = "Pracownicy";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
+            dataGridView1 = new DataGridView();
+            buttonAdd = new Button();
+            buttonDelete = new Button();
+            buttonSave = new Button();
+            buttonLoad = new Button();
+            buttonExport = new Button();
+            buttonExportJson = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 12);
+            dataGridView1.MultiSelect = false;
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(505, 289);
+            dataGridView1.TabIndex = 0;
+            // 
+            // buttonAdd
+            // 
+            buttonAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonAdd.Location = new Point(523, 12);
+            buttonAdd.Name = "buttonAdd";
+            buttonAdd.Size = new Size(90, 30);
+            buttonAdd.TabIndex = 1;
+            buttonAdd.Text = "Dodaj";
+            buttonAdd.UseVisualStyleBackColor = true;
+            // 
+            // buttonDelete
+            // 
+            buttonDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonDelete.Location = new Point(523, 48);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(90, 30);
+            buttonDelete.TabIndex = 2;
+            buttonDelete.Text = "Usuń";
+            buttonDelete.UseVisualStyleBackColor = true;
+            // 
+            // buttonSave
+            // 
+            buttonSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonSave.Location = new Point(12, 307);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(120, 30);
+            buttonSave.TabIndex = 3;
+            buttonSave.Text = "Zapis do .csv";
+            buttonSave.UseVisualStyleBackColor = true;
+            // 
+            // buttonLoad
+            // 
+            buttonLoad.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonLoad.Location = new Point(138, 307);
+            buttonLoad.Name = "buttonLoad";
+            buttonLoad.Size = new Size(120, 30);
+            buttonLoad.TabIndex = 4;
+            buttonLoad.Text = "Odczyt z .csv";
+            buttonLoad.UseVisualStyleBackColor = true;
+            // 
+            // buttonExport
+            // 
+            buttonExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonExport.Location = new Point(264, 307);
+            buttonExport.Name = "buttonExport";
+            buttonExport.Size = new Size(133, 30);
+            buttonExport.TabIndex = 5;
+            buttonExport.Text = "Eksport do XML";
+            buttonExport.UseVisualStyleBackColor = true;
+            buttonExport.Click += buttonExport_Click_1;
+            // 
+            // buttonExportJson
+            // 
+            buttonExportJson.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonExportJson.Location = new Point(403, 307);
+            buttonExportJson.Name = "buttonExportJson";
+            buttonExportJson.Size = new Size(130, 30);
+            buttonExportJson.TabIndex = 6;
+            buttonExportJson.Text = "Eksport do JSON";
+            buttonExportJson.UseVisualStyleBackColor = true;
+            buttonExportJson.Click += ButtonExportJson_Click;
+            // 
+            // MainForm
+            // 
+            ClientSize = new Size(625, 349);
+            Controls.Add(buttonExport);
+            Controls.Add(buttonExportJson);
+            Controls.Add(buttonLoad);
+            Controls.Add(buttonSave);
+            Controls.Add(buttonDelete);
+            Controls.Add(buttonAdd);
+            Controls.Add(dataGridView1);
+            Name = "MainForm";
+            Text = "Pracownicy";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
 
         }
     }
